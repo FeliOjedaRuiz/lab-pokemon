@@ -4,10 +4,14 @@ const Pokemon = ({ pokemon }) => {
   const [isMyPokemon, setIsMyPokemon] = useState(pokemon.isMyPokemon);
 
   return (
-    <div>
-      <h1>{pokemon.name.english}</h1>
-      <p>Type: {pokemon.type.join(" - ")}</p>
-    </div>
+    <div className="card mb-3">
+      <img src="..." className="card-img-top" alt="..."/>
+      <div className="card-body">
+        <h2 className="card-title">{pokemon.name.english}</h2>
+        <p className="card-text">Type: {pokemon.type.join(" - ")}</p>
+        <button href="#" className="btn btn-primary">My Pkmn</button>
+      </div>
+    </div>  
   );
 };
 

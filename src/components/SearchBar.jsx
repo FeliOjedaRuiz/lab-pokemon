@@ -4,11 +4,11 @@ const SearchBar = ({ search, onSearch }) => {
   };
 
   return (
-    <input
+    <input className="form-control col-6 mb-2"
       type="text"
       value={search}
       onChange={handleChange}
-      placeholder="Search Pokemon..."
+      placeholder="Search a Pokemon..."
     />
   );
 };
