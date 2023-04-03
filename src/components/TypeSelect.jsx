@@ -1,20 +1,19 @@
 import React from "react";
 
-function TypeSelect({ pokemonsTypes }) {
+function TypeSelect({ pokemonsTypes, onTypeSelect }) {
+  const handleselect= (e) => {
+    onTypeSelect(e.target.value);
+  };
 
-
-  return (
-  
-    <select className="form-select mb-3" aria-label="Default select example">
-      <option selected>Select Type</option>
-      {console.log(pokemonsTypes)}
+  return (  
+    <select onChange={handleselect} className="form-select mb-3" aria-label="Default select example">
+      <option value="all" >See all types</option>
       { pokemonsTypes.map(type => (
-        <option value={type}>{type}</option>
+        <option key={type} value={type}>{type}</option>
       ))}
-
-    </select>);
+    </select>
+  );
 }
-
 
 
 export default TypeSelect;
